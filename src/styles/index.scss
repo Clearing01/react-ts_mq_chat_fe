@@ -1,0 +1,14 @@
+body {
+	margin: 0;
+}
+
+.root {
+	background: rgb(246, 246, 246);
+	height: 100vh;
+}
+
+.MuiGrid-container {
+	&:not(.MuiGrid-item) {
+		height: 100%;
+	}
+}
