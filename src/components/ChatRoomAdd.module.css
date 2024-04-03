@@ -1,0 +1,19 @@
+.chatRoomAddContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 400px;
+  border: 2px solid #000;
+}
+
+.buttonWrapper {
+  width: 100%;
+  padding-top: 20px;
+}
+
+.button{
+  border: 1px solid !important;
+  width: 50%;
+}

@@ -8,8 +8,8 @@ const CustomLayout = ({ children }: { children: React.ReactNode }): JSX.Element 
 				<Grid item>
 					<Stack
 						sx={{
-							width: '600px',
-							height: '300px',
+							width: '700px',
+							height: '400px',
 							border: 'solid 2px #1976D2',
 							p: '20px',
 							borderRadius: '20px',

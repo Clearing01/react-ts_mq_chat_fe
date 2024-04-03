@@ -1,18 +1,22 @@
 import React from 'react';
 import { Grid } from '@mui/material';
-import Header from 'components/Header';
+import Header from 'layout/Header';
 import { Outlet } from 'react-router-dom';
+import Footer from './Footer';
 
-const Main = (): JSX.Element => {
+const Layout = (): JSX.Element => {
 	return (
 		<>
 			<Grid container>
 				<Grid id="body" container direction="column">
 					<Grid>
-						<Header></Header>
+						<Header />
 					</Grid>
-					<Grid item xs style={{ padding: '32px 40px 40px 40px' }}>
-						<Outlet></Outlet>
+					<Grid>
+						<Outlet />
+					</Grid>
+					<Grid>
+						<Footer />
 					</Grid>
 				</Grid>
 			</Grid>
@@ -20,4 +24,4 @@ const Main = (): JSX.Element => {
 	);
 };
 
-export default Main;
+export default Layout;

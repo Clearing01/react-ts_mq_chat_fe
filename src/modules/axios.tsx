@@ -1,4 +1,4 @@
-import Axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios';
+import Axios, { AxiosInstance, AxiosRequestConfig, AxiosRequestHeaders, AxiosResponse } from 'axios';
 
 export interface HttpResponse<T = unknown> {
 	data: T;
@@ -10,7 +10,7 @@ export interface HttpResponse<T = unknown> {
 const TIMEOUT = 30000;
 
 const api: AxiosInstance = Axios.create({
-	baseURL: process.env.BASE_URL + '/api',
+	baseURL: process.env.REACT_APP_BASE_URL,
 	headers: {
 		'Access-Control-Allow-Origin': '*',
 	},
@@ -28,21 +28,23 @@ api.interceptors.response.use(
 	async (error) => {
 		const response = error.response;
 		errorStatus(response);
-		return Promise.reject(response);
+		return await Promise.reject(response);
 	}
 );
-api.interceptors.request.use((req: AxiosRequestConfig) => {
+api.interceptors.request.use((req: AxiosRequestConfig): any => {
 	req.headers = authHeader(req);
 	return req;
 });
-const authHeader = (req: AxiosRequestConfig) => {
-	const token = null;
+
+const authHeader = (req: AxiosRequestConfig): any => {
+	const token = localStorage.getItem('id');
 	if (token) {
 		req.headers!.Authorization = token;
 	}
 	return req.headers;
 };
-const errorStatus = (response: AxiosResponse) => {
+
+const errorStatus = (response: AxiosResponse): any => {
 	switch (response?.status) {
 		case 400:
 			break;
@@ -69,6 +71,7 @@ const errorStatus = (response: AxiosResponse) => {
 		case 504:
 			break;
 		default: {
+			break;
 		}
 	}
 };

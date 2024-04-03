@@ -1,0 +1,21 @@
+.noHistoryContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: #677;
+}
+
+.noHistoryContainer img {
+    height: 64px;
+    filter: invert(48%) sepia(79%) saturate(0%) hue-rotate(86deg) brightness(130%) contrast(119%);
+    margin-bottom: 16px;
+}
+
+.historyPanel {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 100%;
+}

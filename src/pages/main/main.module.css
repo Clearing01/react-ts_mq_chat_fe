@@ -1,0 +1,15 @@
+.historyContainer {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: 100%;
+  width: 300px;
+  border-right: 1px solid #d9d9d9;
+}
+
+.chatContainer {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: 100%;
+}

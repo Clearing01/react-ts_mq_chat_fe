@@ -1,7 +1,7 @@
 import React from 'react';
 import 'styles/reset.scss';
 import { Button, Typography } from '@mui/material';
-import CustomLayout from 'components/CustomLayout';
+import CustomLayout from 'layout/CustomLayout';
 import { useNavigate } from 'react-router-dom';
 const PageNotFound = (): JSX.Element => {
 	const navigate = useNavigate();

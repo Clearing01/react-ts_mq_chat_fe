@@ -1,10 +1,11 @@
 import React from 'react';
 import { RouteObject, useRoutes } from 'react-router-dom';
-import PageNotFound from 'app/PageNotFound';
-import Login from 'app/Login';
-import Shop from 'app/main/Shop';
-import UserInfo from 'app/main/UserInfo';
-import Main from 'app/main/Main';
+import PageNotFound from 'pages/PageNotFound';
+import Login from 'pages/login/Login';
+import Main from 'pages/main/main';
+import Layout from 'layout/Layout';
+import SignUp from 'pages/login/SignUp';
+import ChatRoom from 'pages/chatRoom/ChatRoom';
 
 const pageNotFoundRoutes: RouteObject = {
 	path: '*',
@@ -12,27 +13,32 @@ const pageNotFoundRoutes: RouteObject = {
 };
 
 const loginRoutes: RouteObject = {
-	path: '/',
+	path: '/login',
 	element: <Login />,
 };
 
+const signUpRoutes: RouteObject = {
+	path: '/sign-up',
+	element: <SignUp />,
+};
+
 const mainRoutes: RouteObject = {
-	path: '/main',
-	element: <Main />,
+	path: '/',
+	element: <Layout />,
 	children: [
 		{
 			index: true,
-			element: <Shop />,
+			element: <Main />,
 		},
 		{
-			path: 'user',
-			element: <UserInfo />,
+			path: '/room/:chatRoomId',
+			element: <ChatRoom />,
 		},
 	],
 };
 
 const Routes = (): React.ReactElement | null => {
-	const routeObjects: RouteObject[] = [loginRoutes, mainRoutes, pageNotFoundRoutes];
+	const routeObjects: RouteObject[] = [loginRoutes, signUpRoutes, mainRoutes, pageNotFoundRoutes];
 	return useRoutes(routeObjects);
 };
 

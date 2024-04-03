@@ -1,0 +1,22 @@
+.loginContainer {
+    font-size: 50px;
+    font-family: 'HSSaemaul-Regular';
+    text-align: center;
+}
+
+.loginContent {
+    width: 500px;
+    margin: auto;
+    padding-top: 50px;;
+}
+
+.loginBtnContainer {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+.loginBtnContent {
+    width: 40%;
+    display: flex;
+}

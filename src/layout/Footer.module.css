@@ -1,0 +1,41 @@
+/*풋터*/
+.footer{
+    z-index: 999;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 64px;
+    font-size: 12px;
+    /*padding: 0 20px;*/
+    background-color: #1976d2;
+    color: #fff;
+    border-top: 1px solid #e2e2e2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.footer .logo {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 13px;
+}
+.footer .logo img {
+    height: 60%;
+}
+.footer .copyright {
+    flex: 1;
+    text-align: left;
+    text-transform: uppercase;
+    padding: 8px;
+}
+
+.footer .infoWrap{
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}

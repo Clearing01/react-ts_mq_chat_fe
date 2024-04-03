@@ -1,0 +1,254 @@
+.roomListContainer {
+  width: 60%;
+  margin: auto;
+}
+
+.roomAddContainer {
+  text-align: right;
+  cursor: pointer;
+}
+
+.roomSummaryContent {
+  display: flex;
+  width: 85%;
+}
+
+.roomCummaryCountContainer {
+  width: 15%;
+  padding-right: 15px;
+  text-align: right;
+}
+
+.roomDescriptionContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.roomDescriptionContent {
+  width: 80%;
+  height: 100%;
+  padding-right: 20px;
+}
+
+.roomDescriptionBtnContainer {
+  position: relative;
+  width: 15%;
+  height: 100%;
+}
+
+.enterBtnContent {
+  border: 1px solid !important;
+  margin-left: auto !important;
+  min-height: 100%;
+  text-align: center;
+}
+
+.notificiationContainer {
+  position: fixed;
+
+  bottom: 120px;
+  right: 20px;
+  z-index: 9999;
+
+  cursor: pointer;
+}
+
+.notificationCountContent {
+  padding: 0px;
+  margin: 0px;
+
+  position: absolute;
+  top: -10px;
+  right: 0px;
+  background-color: yellow;
+}
+
+.notificationCloseContainer {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  color: yellow;
+}
+
+.inviteListContainer {
+  width: 185px;
+  height: 290px;
+
+  padding: 15px;
+  padding-top: 35px;
+
+  position: absolute;
+  bottom: 0px;
+  left: -180px;
+
+  background-color: blue;
+  text-align: center;
+  overflow-y: scroll;
+}
+
+.inviteListContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.inviteContainer {
+  width: 90%;
+  height: 60px;
+
+  padding: 5%;
+
+  text-align: left;
+
+  background-color: white;
+  color: black;
+}
+
+.inviteRoomTextContainer {
+  padding-bottom: 10px;
+}
+
+.inviteBtnContent {
+  width: 100px;
+  height: 30px;
+}
+
+.chatRoomMenuContainer {
+  width: 500px;
+  display: flex;
+  cursor: pointer;
+}
+
+.checkBtn {
+  display: none;
+}
+
+.checkBtn:checked ~ .chatRoomMenuBarContainer {
+  display: block;
+}
+
+.chatRoomMenuBarContainer {
+  width: 100px;
+  padding: 20px;
+
+  position: absolute;
+  z-index: 99999;
+  top: 200px;
+  background-color: yellow;
+}
+
+.chatRoomMenuBarContent {
+  width: 100%;
+  display: flex;
+  cursor: pointer;
+}
+
+.chatRoomMenuBarTextContent {
+  padding-left: 10px;
+  margin: 0px;
+
+  height: 25px;
+  line-height: 25px;
+  font-size: 15px;
+}
+
+.chatRoomContainer {
+  width: 80%;
+  height: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+.chatRoomSubjectContainer {
+  width: 100%;
+  padding: 20px;
+  font-size: 1.8rem;
+}
+
+.chatRoomMessageListContainer {
+  width: 530px;
+  height: 100%;
+  margin: auto;
+}
+
+.chatRoomMessageContainer {
+  width: 100%;
+  height: 500px;
+  padding: 20px;
+  padding-bottom: 0px;
+
+  background-color: #f5f199;
+
+  overflow-y: scroll;
+}
+
+.chatRoomMessageContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.messageMyContainer {
+  text-align: right;
+}
+
+.messageOpponentContainer {
+  text-align: left;
+}
+
+.messageMyContent {
+  float: right;
+
+  padding-top: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  background-color: white;
+}
+
+.messageOpponentContent {
+  float: left;
+
+  padding-top: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  background-color: white;
+}
+
+.chatRoomSendContainer {
+  width: 100%;
+  height: 35px;
+  padding: 20px;
+
+  background-color: #c6c8cc;
+}
+
+.messageTextContent {
+  width: 75%;
+}
+
+.messageBtnContent {
+  width: 15%;
+}
+
+.emoticonBtnContent {
+  cursor: pointer;
+}
+
+.chatRoomEmoticonBarContainer {
+  display: block;
+
+  width: 75%;
+  height: 100%;
+  min-height: 350px;
+  padding: 10px;
+
+  /* position: absolute; */
+  z-index: 99999;
+  bottom: 0px;
+  background-color: #e9e9e9;
+}
+
+.emoticonGroupContainer {
+  display: flex;
+}
+
+.divCursorPointer {
+  cursor: pointer;
+}
